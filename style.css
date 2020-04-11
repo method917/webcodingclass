@@ -1,0 +1,22 @@
+#active{color:white;font-weight:bold}
+.saw {color:black;}
+.theme{color:yellow}
+a {color:black;text-decoration: none;}
+p {margin-top20px}
+h1 {font-size:35px;text-align:center;
+  border-bottom: 2px solid transparent;margin:0;padding:10px;
+  background-color:#141b7c}
+#grid ol{border-right:2px solid transparent;
+  width:130px;
+  margin:0;
+  padding-left:30px;padding-top:10px;
+  background-color:#68a2ff}
+body{margin:0}
+#grid {display: grid;
+grid-template-columns:170px 1fr}
+#article {padding-right:10px}
+@media(max-width:800px){
+  #grid{display:block;}
+  #grid ol{border-right:none;width:800px;padding-bottom:10px;}
+  h1{border-bottom:none;}
+  #article {padding-left:10px}}
