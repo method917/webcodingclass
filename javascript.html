@@ -1,3 +1,4 @@
+<!doctype html>
 <head>
 <title>메쏘드쌤의웹코딩수업</title>
 <meta charset="utf-8">
@@ -9,8 +10,34 @@
   gtag('js', new Date());
   gtag('config', 'UA-163106828-1');
 </script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<script>
+function nightdayhandler(self){
+        var target = document.querySelector('#article')
+        if(self.value==='night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        self.value='day';
+var alist = document.querySelectorAll('#article a');
+i=0;
+while(i<alist.length){
+console.log(alist[i]);
+alist[i].style.color = 'powderblue';
+i=i+1;}
+        } else{
+        target.style.backgroundColor='white';
+        target.style.color='black'
+        self.value='night';
+var alist = document.querySelectorAll('#article a');
+i=0;
+while(i<alist.length){
+console.log(alist[i]);
+alist[i].style.color = 'black';
+i=i+1;}}}
+</script>
 </head>
+
 <body>
   <link rel="stylesheet" href="style.css">
 <h1>
@@ -24,24 +51,17 @@
     <li><a href="javascript.html"class="saw"id="active">JAVASCRIPT</a></li>
   </ol>
   <div id="article">
-
     <h2>Javascript</h2>
     <input type="button" value="click" onclick="alert('click')">
     <br>
     <input type="text" onchange="alert('changed')">
     <br>
     <input type="text" onkeydown="alert('keydown')">
-    <br>
-    <input type="button" value="night" onclick="
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';">
-    <input type="button" value="day" onclick="
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black'">
-    <br>
-    <p>자바스크립트란 정적인 웹페이지를 동적으로 만들어주는 프로그래밍 언어야. 즉, 사용자와 상호작용을 할 수 있게 해 주는 것이지. 여러분들이 화면상의 어떤 대상에 마우스를 올렸을 때 메뉴가 뜬다던가, 동영상이 나올 때 있지? 혹은 클릭을 하면 검색이 되는 등의 '행동'을 산출해주는 언어인 것이야. html이 건물이라면, css는 인테리어이고, javascript는 안에서 일하고 있는 사람인 셈이지. 자바스크립트로 어떤 걸 할 수 있을지 상상해볼 수 있겠니?</p>
-
-    <h3> 비교연산자와 블리언(coparison operator & boolean)</h3>
+<p>
+    자바스크립트란 정적인 웹페이지를 동적으로 만들어주는 프로그래밍 언어야. 즉, 사용자와 상호작용을 할 수 있게 해 주는 것이지. 여러분들이 화면상의 어떤 대상에 마우스를 올렸을 때 메뉴가 뜬다던가, 동영상이 나올 때 있지? 혹은 클릭을 하면 검색이 되는 등의 '행동'을 산출해주는 언어인 것이야. html이 건물이라면, css는 인테리어이고, javascript는 안에서 일하고 있는 사람인 셈이지. 자바스크립트로 어떤 걸 할 수 있을지 상상해볼 수 있겠니?
+</p>
+<p>
+    <h3> * 비교연산자와 블리언(coparison operator & boolean)</h3>
 
     <h4> === </h4>
 
@@ -64,8 +84,9 @@
        <script>
        document.write(1<1);
        </script>
-
-    <h3> Conditional statements</h3>
+</p>
+<p>
+    <h3> * 조건문(Conditional statements)</h3>
 
     <h4> Program </h4>
     <script>
@@ -93,43 +114,9 @@
         document.write("4<br>");
         </script>
         <br>
-
-        <input id="night_day" type="button" value="night" onclick="
-        if(document.querySelector('#night_day').value==='night')
-        {document.querySelector('body').style.backgroundColor='black';
-        document.querySelector('body').style.color='white';
-        document.querySelector('#night_day').value='day';}
-        else
-        {document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.color='black'
-        document.querySelector('#night_day').value='night';}
-        ">
-        <input id="night_day" type="button" value="night" onclick="
-        var target = document.querySelector('body')
-        if(this.value==='night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
-        this.value='day';
-var alist = document.querySelectorAll('a');
-i=0;
-while(i<alist.length){
-console.log(alist[i]);
-alist[i].style.color = 'powderblue';
-i=i+1;}
-        } else{
-        target.style.backgroundColor='white';
-        target.style.color='black'
-        this.value='night';
-var alist = document.querySelectorAll('a');
-i=0;
-while(i<alist.length){
-console.log(alist[i]);
-alist[i].style.color = 'black';
-i=i+1;}
-        }
-        ">
-
-        <h3> Array </h3>
+</p>
+<p>
+    <h3> * 배열(Array) </h3>
 
         <h4> Syntax </h4>
         <script>
@@ -151,8 +138,9 @@ i=i+1;}
         <script>
           document.write(coworkers.length);
         </script>
-
-        <h3> Loop </h3>
+<p>
+</p>
+        <h3> * 반복문(Loop) </h3>
          <ul>
            <script>
             document.write('<li>1</li>');
@@ -165,13 +153,14 @@ i=i+1;}
             document.write('<li>4</li>');
             </script>
           </ul>
-
-          <h3> Loop & Array </h3>
+</p>
+<p>
+  <h3> * 반복문과 배열(Loop & Array) </h3>
           <script>
-            var friends = ['method917', 'netkid917', 'momo', 'piru', 'kjy5365', 'planners'];
+            var friends = ['metho', 'netkid', 'momo', 'piru', 'momobooks', 'planners'];
           </script>
 
-          <h4> friends </h3>
+          <h4> friends </h4>
           <ul>
             <script>
               var t = 0;
@@ -181,6 +170,13 @@ i=i+1;}
               }
             </script>
           </ul>
+</p>
+<p>
+    <h3> * 함수(function) </h3>
+      head 참고
+        <input id="night_day" type="button" value="night" onclick="
+                nightdayhandler(this)">
+
+</p>
       </div></div>
   </body>
-</html>
