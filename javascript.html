@@ -2,6 +2,10 @@
 <head>
 <title>메쏘드쌤의웹코딩수업</title>
 <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="color.js">
+</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163106828-1"></script>
 <script>
@@ -12,30 +16,6 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-<script>
-function nightdayhandler(self){
-        var target = document.querySelector('#article')
-        if(self.value==='night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
-        self.value='day';
-var alist = document.querySelectorAll('#article a');
-i=0;
-while(i<alist.length){
-console.log(alist[i]);
-alist[i].style.color = 'powderblue';
-i=i+1;}
-        } else{
-        target.style.backgroundColor='white';
-        target.style.color='black'
-        self.value='night';
-var alist = document.querySelectorAll('#article a');
-i=0;
-while(i<alist.length){
-console.log(alist[i]);
-alist[i].style.color = 'black';
-i=i+1;}}}
-</script>
 </head>
 
 <body>
@@ -51,6 +31,9 @@ i=i+1;}}}
     <li><a href="javascript.html"class="saw"id="active">JAVASCRIPT</a></li>
   </ol>
   <div id="article">
+    <input id="night_day" type="button" value="night" onclick="
+            nightdayhandler(this)">
+
     <h2>Javascript</h2>
     <input type="button" value="click" onclick="alert('click')">
     <br>
@@ -174,9 +157,40 @@ i=i+1;}}}
 <p>
     <h3> * 함수(function) </h3>
       head 참고
-        <input id="night_day" type="button" value="night" onclick="
-                nightdayhandler(this)">
-
+</p>
+    <h3> * Javascript 더 알아보기 </h3>
+<p>* document객체<br>
+- 웹페이지 태그 삭제, 자식 태그 추가
+</p>
+<p>* dom객체<br>
+- document의 심화
+</p>
+<p>* window객체<br>
+- 웹브라우져 자체를 제어<br>
+- 주소 알기, 새창 열기, 화면 크기 알기 등
+</p>
+<p>* ajax객체<br>
+- 웹페이지를 리로드하지 않고 정보를 변경<br>
+- 현대적 웹앱의 필수 테크닉
+</p>
+<p>* cookie객체<br>
+- 웹페이지가 리로드되어도 현재 상태 유지<br>
+- 사용자를 위한 개인화된 서비스
+</p>
+<p>* offline web application객체<br>
+- 인터넷이 끊겨도 동작하는 프로그램
+</p>
+<p>* webRTC객체<br>
+- 화상통신
+</p>
+<p>* speech객체<br>
+- 사용자 음성 인식, 음성 정보 전달
+</p>
+<p>* webGL객체<br>
+- 3차원 그래픽 게임
+</p>
+<p>* webVR객체<br>
+- 가상현실
 </p>
       </div></div>
   </body>
